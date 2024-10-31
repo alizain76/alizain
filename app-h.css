@@ -1,0 +1,243 @@
+/*--------------------------------------*\
+	Navigation mobile
+\*--------------------------------------*/
+#back {
+    float: left;
+    background: url(../images/arrow.svg) center center no-repeat;
+    width: 15px;
+    height: 15px;
+    transform: rotate(180deg);
+    margin-top: 4px;
+}
+
+.topbar_menu_open {
+    transform: translate3d(0,0%,0) !important;
+    top: 0px !important;
+}
+
+.display {
+    display: block;
+}
+
+.menu_btn {
+    /*text-align: center;
+    line-height: 28px;
+    width: 43px;
+    height: 30px;
+    background: transparent;
+    display: block;
+    background: transparent;
+ 
+    border: solid 1px #459D36;
+    color: #459D36;
+    color: #fff;
+    position: relative;
+    margin-left: 2px;*/
+ }
+
+.menu_btn span {
+   /* position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;*/
+}
+
+
+.menu_btn span::before, .menu_btn span::after {
+    /*content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-6px);
+    transition: transform 0.5s;
+    transform-origin: 50% 50%;*/
+}
+
+.menu_btn span::after {
+    /*transform: translateY(6px);*/
+}
+
+body.body_mobile {
+    overflow: hidden;
+}
+
+.menu_mobile {
+    background: url(../images/gold-hair.svg) center center no-repeat;
+    background-size: cover;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+
+.menu_mobile ul, .menu_mobile li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu_mobile[element="true"] {
+    animation: menuMobileVisible  0.2s both;
+}
+
+.menu_mobile[element="false"] {
+    animation: menuMobileInvisible  0.2s both;
+}
+
+@keyframes menuMobileVisible {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes menuMobileInvisible {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+ul.navigation_mobile  {
+    position: relative;
+    top:0;
+    left: 0;
+    transition: all 0.2s;
+
+}
+
+.navigation_mobile a {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    border-top: 1px solid #d9d9d9;
+    color: #232323;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+}
+.navigation_mobile a:hover{
+    /*color:#459d36*/
+}
+
+
+.navigation_mobile .current-menu-item a, .navigation_mobile a:hover {
+    text-decoration: none;
+    background-color: #f9f7f5cc;
+    color: #4c9c2e;
+}
+.navigation_mobile .menu-item-has-children a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.navigation_mobile  .sub-menu{
+    position: absolute;
+    top:0;
+    left: 100%;
+    width: 100%;
+    transition: all 0.2s;
+    display: none;
+}
+
+.navigation_mobile .menu-item-has-children > a::after {
+    float: right;
+    content: "";
+    background: url(../images/arrow.svg) center center no-repeat;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.title_menu {
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px 10px 10px 10px;
+    color: #232323;
+}
+
+.display_tag {
+    display: block !important;
+}
+
+.close_menu {
+    display: block;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: auto;
+    width: 25px;
+    height: 25px;
+    background: url(../images/close.svg) center center no-repeat;
+    background-size: cover;
+}
+
+
+/*abdou*/
+.menu-inner-position {
+    position: relative;
+}
+.image-hair {
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.menu_btn span {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #459D36;
+    transform: translateX(-50%) translateY(-50%);
+    
+    z-index: 2;*/
+}
+.menu_btn span::before, .menu_btn span::after {
+    /*content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #459D36;
+    transform: translateY(-6px);
+    transition: transform 0.5s;
+    transform-origin: 50% 50%;*/
+}
+
+.cover-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0,0.5);
+    z-index: 100;
+}
+
